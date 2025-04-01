@@ -1,0 +1,33 @@
+
+
+
+1. dfx identity list utwórz identity ( np. capo i boss )
+> dfx identity new capo ( To będzie konto posiadające tokeny i rozdające tokeny )
+> dfx identity new boss ( Tego identity użyjemy do mintowania tokena i do spalania ( burn ) tokena )
+
+2. logujemy się do identity capo 
+> dfx identity use capo
+
+3. Uruchamiany skrypt tokenic.sh
+
+Wybieramy kolejno konto mintujące jako boss
+Konto do przelewu całości tokenów jako capo
+
+4. Po wprowadzeniu i zatwierdzeniu mamy kanister z toekenm na replice a kontrolerem kanistra jest capo
+
+5. Tworzymy nowy projekt dApp w osobnym oknie terminala z identity capo
+
+dfx udentity whoami 
+/jeżeli nie jesteśmy capo to uruchamiamy 
+
+dfx identity use capo
+
+6. Tworzymy projekt ( jako capo ) 
+
+> dfx new fillia
+
+7. Wskazujemy Motoko jako backend i Vue.js jako frontend, oraz Internet Identity [v] 
+
+8. Przechodzimy na kanister Lokalnego Internet Identity i tworzymy kilka nowych Internet Identity *w skrócie II będę to nazywał.
+
+9. 
