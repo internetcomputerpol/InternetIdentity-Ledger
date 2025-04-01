@@ -14,24 +14,25 @@ Schemat działania
 Instrukcja
 
 1. Tworzenie Identity
-Najpierw tworzymy dwie identity: `capo` oraz `boss`.
+Najpierw tworzymy dwia identity: `capo` oraz `boss`.
 
-```sh
-# Tworzenie identity
+
+Tworzenie identity
 dfx identity new capo  # Konto posiadające i rozdające tokeny
 dfx identity new boss  # Konto do mintowania i spalania (burn) tokenów
-```
 
-### 2. Logowanie do Identity `capo`
+
+2. Logowanie do Identity `capo`
 
 ```sh
 dfx identity use capo
 ```
 
-### 3. Uruchamianie skryptu `tokenic.sh`
+3. Uruchamianie skryptu `tokenic.sh`
 
 Skrypt oraz inne pomocne narzędzia znajdują się tutaj:
-[GitHub - TokenIC](https://github.com/internetcomputerpol/TokenIC)
+
+> https://github.com/internetcomputerpol/TokenIC
 
 Po uruchomieniu skryptu:
 - Wybieramy **boss** jako konto mintujące.
@@ -39,32 +40,45 @@ Po uruchomieniu skryptu:
 
 Po zatwierdzeniu otrzymujemy **kanister z tokenem** na lokalnej replice. **Kontrolerem kanistra jest `capo`.**
 
-### 4. Tworzenie nowego projektu DApp
+4. Tworzenie nowego projektu DApp
 
 Otwieramy nowy terminal i upewniamy się, że używamy identity `capo`:
 
-```sh
+
 dfx identity whoami
-# Jeśli nie jesteśmy zalogowani jako capo:
+
+Jeśli nie jesteśmy zalogowani jako capo:
 dfx identity use capo
-```
+
 
 Następnie tworzymy nowy projekt:
 
-```sh
 dfx new fillia
-```
+
 
 Wybieramy:
 - **Motoko** jako backend.
 - **Vue.js** jako frontend.
 - **Internet Identity** jako opcję logowania.
 
-### 5. Tworzenie Internet Identity
+5. Tworzenie Internet Identity
 
 Przechodzimy do lokalnego kanistra **Internet Identity** i tworzymy kilka nowych kont **II**.
 
----
 
-**Kontynuacja w kolejnych krokach...**
+-----------------------------------------------
+Połączenie Internet Identity z Tokenem 
+-----------------------------------------------
+
+w Terminalu musisicie zainstalować Ledger-IC w celu połączenia się z kanistrem ( u siebie) tokena icrc-1 z poziomu frontendu
+należy łączyć się z poziomu frontendu ponieważ w plikach sesji znajduje się poświadczenie II i po tym poświadczeniu 
+kanister ledgera będzie wiedział, że dane połączenie jest zautoryzowane właściwym Internet Identity. 
+
+w Terminalu wpiszcie 
+
+> npm i @dfinity/ledger-icp
+
+6. Podmieńcie zawartość App.vue z 
+
+
 
