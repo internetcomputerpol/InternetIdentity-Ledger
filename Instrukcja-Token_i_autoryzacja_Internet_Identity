@@ -10,7 +10,6 @@ Wszystko odbywa się za pomocą dApp w Vue i na frontendzie ( tam gdzie sesja ot
 
 
 Instrukcja
-_____________________________________________________
 
 1. dfx identity list utwórz identity ( np. capo i boss )
 > dfx identity new capo ( To będzie konto posiadające tokeny i rozdające tokeny )
