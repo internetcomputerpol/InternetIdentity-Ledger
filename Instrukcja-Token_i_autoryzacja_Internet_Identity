@@ -1,35 +1,36 @@
-Połączenie Internet Identity z Tokenem ICRC-1 na lokalnej replice
+# Połączenie Internet Identity z Tokenem ICRC-1 na lokalnej replice
 
-📌 Opis
+## Opis
 
 Ten przewodnik opisuje sposób integracji Internet Identity z tokenem utworzonym na lokalnej replice (ICRC-1). DApp pozwala na logowanie za pomocą lokalnego Internet Identity, a następnie wykonywanie transferów tokena do innych użytkowników posiadających Internet Identity.
 
-📜 Schemat działania:
+### Schemat działania
 - Internet Identity **l3uwz-kk4se-(...)** przelewa **500 Tokenów XYZ** do Internet Identity **7d5uu-nagqm-(...)**.
 - Wszystko odbywa się w aplikacji DApp stworzonej w **Vue.js**, która obsługuje sesję Internet Identity na frontendzie.
 
 ---
-🛠 Instrukcja
 
-1️⃣ Tworzenie Identity
+## Instrukcja
+
+### 1. Tworzenie Identity
 Najpierw tworzymy dwie identity: `capo` oraz `boss`.
 
 ```sh
-Tworzenie identity
+# Tworzenie identity
 dfx identity new capo  # Konto posiadające i rozdające tokeny
 dfx identity new boss  # Konto do mintowania i spalania (burn) tokenów
 ```
 
-2️⃣ Logowanie do Identity `capo`
+### 2. Logowanie do Identity `capo`
 
 ```sh
 dfx identity use capo
 ```
 
-3️⃣ Uruchamianie skryptu `tokenic.sh`
+### 3. Uruchamianie skryptu `tokenic.sh`
 
-📌 Skrypt oraz inne pomocne narzędzia znajdują się tutaj:
-🔗 [GitHub - TokenIC](https://github.com/internetcomputerpol/TokenIC)
+Skrypt oraz inne pomocne narzędzia znajdują się tutaj:
+[GitHub - TokenIC](https://github.com/internetcomputerpol/TokenIC)
 
 Po uruchomieniu skryptu:
 - Wybieramy **boss** jako konto mintujące.
@@ -37,32 +38,32 @@ Po uruchomieniu skryptu:
 
 Po zatwierdzeniu otrzymujemy **kanister z tokenem** na lokalnej replice. **Kontrolerem kanistra jest `capo`.**
 
-### 4️⃣ Tworzenie nowego projektu DApp
+### 4. Tworzenie nowego projektu DApp
 
 Otwieramy nowy terminal i upewniamy się, że używamy identity `capo`:
 
 ```sh
-$ dfx identity whoami
+dfx identity whoami
 # Jeśli nie jesteśmy zalogowani jako capo:
-$ dfx identity use capo
+dfx identity use capo
 ```
 
 Następnie tworzymy nowy projekt:
 
 ```sh
-$ dfx new fillia
+dfx new fillia
 ```
 
-✅ Wybieramy:
+Wybieramy:
 - **Motoko** jako backend.
 - **Vue.js** jako frontend.
-- **Internet Identity** jako opcję logowania `[v]`.
+- **Internet Identity** jako opcję logowania.
 
-### 5️⃣ Tworzenie Internet Identity
+### 5. Tworzenie Internet Identity
 
 Przechodzimy do lokalnego kanistra **Internet Identity** i tworzymy kilka nowych kont **II**.
 
 ---
 
-🚀 **Kontynuacja w kolejnych krokach...**
+**Kontynuacja w kolejnych krokach...**
 
