@@ -1,5 +1,16 @@
+Siema opisuję tutaj w jaki sposób połączyć Internet Identity z Tokenem utworzonym na lokalej replice ( token icrc-1) 
+
+Założenie dosyć proste dApp pozwala na logowanie za pomocą Internet Identity ( lokalnie )
+do Internet Identity przelewamy daną ilość naszego świeżo utworzonego tokena. 
+Z poziomu dApp po zalogowaniu do Internet Identity mamy możliwość wykonywania przelewów (transferów ) tokena do innych Internet Identity. 
 
 
+Internet Identity l3uwz-kk4se-(...) ----------> Przelewa 500 Tokena XYZ ( Nasz token ) do Internet Identity 7d5uu-nagqm-(...) 
+Wszystko odbywa się za pomocą dApp w Vue i na frontendzie ( tam gdzie sesja otrzymuje poświadczenia od Internet Idenity ) 
+
+
+Instrukcja
+_____________________________________________________
 
 1. dfx identity list utwórz identity ( np. capo i boss )
 > dfx identity new capo ( To będzie konto posiadające tokeny i rozdające tokeny )
