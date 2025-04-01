@@ -1,18 +1,19 @@
-# Połączenie Internet Identity z Tokenem ICRC-1 na lokalnej replice
+Połączenie Internet Identity z Tokenem ICRC-1 na lokalnej replice
 
-## Opis
+Opis
+-----------------------------
 
 Ten przewodnik opisuje sposób integracji Internet Identity z tokenem utworzonym na lokalnej replice (ICRC-1). DApp pozwala na logowanie za pomocą lokalnego Internet Identity, a następnie wykonywanie transferów tokena do innych użytkowników posiadających Internet Identity.
 
-### Schemat działania
+Schemat działania
 - Internet Identity **l3uwz-kk4se-(...)** przelewa **500 Tokenów XYZ** do Internet Identity **7d5uu-nagqm-(...)**.
 - Wszystko odbywa się w aplikacji DApp stworzonej w **Vue.js**, która obsługuje sesję Internet Identity na frontendzie.
 
----
+------------------------------
 
-## Instrukcja
+Instrukcja
 
-### 1. Tworzenie Identity
+1. Tworzenie Identity
 Najpierw tworzymy dwie identity: `capo` oraz `boss`.
 
 ```sh
