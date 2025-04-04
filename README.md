@@ -22,7 +22,14 @@ dfx identity new capo
 ```sh
 dfx identity new boss
 ```
+Jeżeli nie macie spiętego keyringa = przy tworzeniu identity prosi was o hasło dla identity
+Systemowy keyring (czyli „magazyn kluczy”) w Ubuntu to mechanizm zarządzania hasłami i innymi danymi uwierzytelniającymi
+Rozwiązanie odpalcie skrypt instalacji:
 
+```sh
+sudo apt update
+sudo apt install gnome-keyring
+```
 Tworzenie identity
 dfx identity new capo  # Konto posiadające i rozdające tokeny
 dfx identity new boss  # Konto do mintowania i spalania (burn) tokenów
