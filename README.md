@@ -17,10 +17,10 @@ Instrukcja
 Najpierw tworzymy dwia identity: `capo` oraz `boss`.
 
 ```sh
-> dfx identity new capo
+dfx identity new capo
 ```
 ```sh
-> dfx identity new boss
+dfx identity new boss
 ```
 
 Tworzenie identity
@@ -34,11 +34,18 @@ dfx identity new boss  # Konto do mintowania i spalania (burn) tokenów
 dfx identity use capo
 ```
 
-3. Uruchamianie skryptu `tokenic.sh`
+3. Uruchamianie skryptu `tokenic.sh` zakładam wrzucicie go do tego samego katalogu 
+
+```sh
+bash tokenic.sh
+```
 
 Skrypt oraz inne pomocne narzędzia znajdują się tutaj:
 
+
 > https://github.com/internetcomputerpol/TokenIC
+
+
 
 Po uruchomieniu skryptu:
 ----------------------------------
@@ -75,6 +82,8 @@ Wybieramy:
 Przechodzimy do lokalnego kanistra **Internet Identity** i tworzymy kilka nowych kont **II**.
 
 
+
+                  
 -----------------------------------------------
 Połączenie Internet Identity z Tokenem 
 -----------------------------------------------
