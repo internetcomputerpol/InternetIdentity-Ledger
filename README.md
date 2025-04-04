@@ -161,6 +161,7 @@ Połączenie Internet Identity z Tokenem
 -----------------------------------------------
 
 Tworzenie nowego projektu DApp
+
 👨‍🚀 E
 
 w Terminalu musisicie zainstalować Ledger-IC w celu połączenia się z kanistrem ( u siebie) tokena icrc-1 z poziomu frontendu
