@@ -22,6 +22,10 @@ dfx identity new capo
 ```sh
 dfx identity new boss
 ```
+------------------------
+PROSI O PODANIE Hasła dla Identity
+Please enter a passphrase for your identity: 
+-----------------------
 
 ☢️
 Jeżeli nie macie spiętego keyringa = przy tworzeniu identity prosi was o hasło dla identity
