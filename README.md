@@ -87,9 +87,14 @@ Po wpisaniu dfx new identity nazwa_konta może wyskoczyć takie okno z promptem 
 -------------------------------------------------
 
 Tworzenie identity
-dfx identity new capo  # Konto posiadające i rozdające tokeny
-dfx identity new boss  # Konto do mintowania i spalania (burn) tokenów
 
+# Konto posiadające i rozdające tokeny
+```sh
+dfx identity new capo
+```
+```sh
+dfx identity new boss  # Konto do mintowania i spalania (burn) tokenów
+```
 
 2. Logowanie do Identity `capo`
 
