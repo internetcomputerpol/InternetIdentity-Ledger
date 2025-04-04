@@ -113,6 +113,7 @@ Skrypt oraz inne pomocne narzędzia znajdują się tutaj:
 
 ------------------------------------------------- 
 Obsługa skryptu
+
 👨‍🚀 C 
 
 Po uruchomieniu skryptu:
@@ -125,6 +126,7 @@ Po zatwierdzeniu otrzymujemy **kanister z tokenem** na lokalnej replice. **Kontr
 
 -------------------------------------------------
 Tworzenie nowego projektu DApp
+
 👨‍🚀 D
 
 Otwieramy nowy terminal i upewniamy się, że używamy identity `capo`:
