@@ -13,7 +13,9 @@ Schemat działania
 
 Instrukcja
 
-1. Tworzenie Identity
+**A
+1. Tworzenie Identity 🪪
+--------------------------------------------
 Najpierw tworzymy dwia identity: `capo` oraz `boss`.
 
 ```sh
@@ -23,8 +25,10 @@ dfx identity new capo
 dfx identity new boss
 ```
 ------------------------
-PROSI O PODANIE Hasła dla Identity
+PROSI O PODANIE Hasła dla Identity 🧐
 Please enter a passphrase for your identity: 
+
+SOLUCJA PYTA O HASŁO START ( Jeżeli nie macie tego problemu przejdzcie do punktu 
 -----------------------
 
 ☢️
@@ -84,20 +88,13 @@ Po wpisaniu dfx new identity nazwa_konta może wyskoczyć takie okno z promptem 
 ![Prompt](Prompt.png)
 
 
--------------------------------------------------
+------------------------------------------------- 
+SOLUCJA PRZY HAŚLE END
 
-Tworzenie identity
 
-# Konto posiadające i rozdające tokeny
-```sh
-dfx identity new capo
-```
-# Konto do mintowania i spalania (burn) tokenów
-```sh
-dfx identity new boss  
-```
+**B
 
-2. Logowanie do Identity `capo`
+2. Logowanie do Identity `capo` 🪪
 
 ```sh
 dfx identity use capo
@@ -114,7 +111,9 @@ Skrypt oraz inne pomocne narzędzia znajdują się tutaj:
 
 > https://github.com/internetcomputerpol/TokenIC
 
-
+------------------------------------------------- 
+Obsługa skryptu
+**C 
 
 Po uruchomieniu skryptu:
 ----------------------------------
@@ -124,16 +123,20 @@ Po uruchomieniu skryptu:
 
 Po zatwierdzeniu otrzymujemy **kanister z tokenem** na lokalnej replice. **Kontrolerem kanistra jest `capo`.**
 
-4. Tworzenie nowego projektu DApp
+-------------------------------------------------
+Tworzenie nowego projektu DApp
+**D
 
 Otwieramy nowy terminal i upewniamy się, że używamy identity `capo`:
 
 ```sh
 dfx identity whoami
 ```
-Jeśli nie jesteśmy zalogowani jako capo:
-dfx identity use capo
+Jeśli nie jesteśmy zalogowani jako capo 🪪:
 
+```sh
+dfx identity use capo
+```
 
 Następnie tworzymy nowy projekt:
 
@@ -157,6 +160,9 @@ Przechodzimy do lokalnego kanistra **Internet Identity** i tworzymy kilka nowych
 Połączenie Internet Identity z Tokenem 
 -----------------------------------------------
 
+Tworzenie nowego projektu DApp
+**E
+
 w Terminalu musisicie zainstalować Ledger-IC w celu połączenia się z kanistrem ( u siebie) tokena icrc-1 z poziomu frontendu
 należy łączyć się z poziomu frontendu ponieważ w plikach sesji znajduje się poświadczenie II i po tym poświadczeniu 
 kanister ledgera będzie wiedział, że dane połączenie jest zautoryzowane właściwym Internet Identity. 
@@ -166,25 +172,31 @@ w Terminalu wpiszcie
 ```sh
 npm install @dfinity/auth-client @dfinity/agent @dfinity/principal @dfinity/ledger-icrc
 ```
+------------------------------------------------
+6. Podmieńcie zawartość App.vue z tą z GitHub
 
-6. Podmieńcie zawartość App.vue z tą z GitHub 
+**F  
 
 > https://github.com/internetcomputerpol/InternetIdentity-Ledger/blob/main/App.vue
 
+-------------------------------------
+**G
 7. Po przekopiowaniu podmieńcie dowiązanie do waszego backendu w Motoko ( u was może być inne zależnie od tego jak nazwaliście projekt ) 
 
 > import u mnie : import { filia_backend } from 'declarations/filia_backend/index';
 
 u was może być inna nazwa np. import { twojaNazwaBackendu_backend } from 'declarations/TwojaNazwaBackendu_backend/index';
 
-
+-----------------------------------
 8. Po zmianach i zapisuaniu wpisujemy ( jako identity capo !!! ) 
+**H
 
 ```sh
 dfx deploy
 ```
-
+-----------------------------------
 9. Problem Gołych kont nasze identity nie mają Tokena ?
+**I
 
 Nasze identity nie mają tokena ponieważ całość tokena posiada identity capo. 
 Po utworzeniu Identity i zalogowaniu będziemy mogli odczytać Internet Identity utworzonych II. 
