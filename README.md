@@ -22,14 +22,34 @@ dfx identity new capo
 ```sh
 dfx identity new boss
 ```
+
+
 Jeżeli nie macie spiętego keyringa = przy tworzeniu identity prosi was o hasło dla identity
+Normalnie powinno to śmigać, ale czasami 
+
 Systemowy keyring (czyli „magazyn kluczy”) w Ubuntu to mechanizm zarządzania hasłami i innymi danymi uwierzytelniającymi
-Rozwiązanie odpalcie skrypt instalacji:
+Rozwiązanie odpalcie skrypt reinstalacji ( zakładam, że macie spiętą wirtualkę tylko pod ICP  Developerkę ) :
+Reinstall wywali wszystkie zapisane klucze jak to środowisko dev to spoko. 
 
 ```sh
 sudo apt update
-sudo apt install gnome-keyring
+sudo apt install --reinstall gnome-keyring
+sudo apt install libsecret-1-0 libsecret-1-dev
+gnome-keyring-daemon --start
+
 ```
+
+Warto wykonać reboot systemu
+
+```sh
+reboot
+
+```
+Po wpisaniu dfx new identity nazwa_konta może wyskoczyć takie okno z promptem o podanie poświadczeń root ( wpiszcie hasło roota w takim przypadku )
+
+![Prompt](Prompt.png)
+
+
 Tworzenie identity
 dfx identity new capo  # Konto posiadające i rozdające tokeny
 dfx identity new boss  # Konto do mintowania i spalania (burn) tokenów
