@@ -23,9 +23,15 @@ dfx identity new capo
 dfx identity new boss
 ```
 
-
+☢️
 Jeżeli nie macie spiętego keyringa = przy tworzeniu identity prosi was o hasło dla identity
-Normalnie powinno to śmigać, ale czasami 
+Normalnie powinno to śmigać, ale czasami po wpisaniu 
+
+> dfx identity new nazwa_identity_nowego
+
+pojawia się prompt o podanie hasła
+
+![Prompt](Prompt0.png)
 
 Systemowy keyring (czyli „magazyn kluczy”) w Ubuntu to mechanizm zarządzania hasłami i innymi danymi uwierzytelniającymi
 Rozwiązanie odpalcie skrypt reinstalacji ( zakładam, że macie spiętą wirtualkę tylko pod ICP  Developerkę ) :
