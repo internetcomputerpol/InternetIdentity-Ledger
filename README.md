@@ -13,7 +13,7 @@ Schemat działania
 
 Instrukcja
 
-**A
+👨‍🚀 A
 1. Tworzenie Identity 🪪
 --------------------------------------------
 Najpierw tworzymy dwia identity: `capo` oraz `boss`.
@@ -92,7 +92,7 @@ Po wpisaniu dfx new identity nazwa_konta może wyskoczyć takie okno z promptem 
 SOLUCJA PRZY HAŚLE END
 
 
-**B
+👨‍🚀 B
 
 2. Logowanie do Identity `capo` 🪪
 
@@ -113,7 +113,7 @@ Skrypt oraz inne pomocne narzędzia znajdują się tutaj:
 
 ------------------------------------------------- 
 Obsługa skryptu
-**C 
+👨‍🚀 C 
 
 Po uruchomieniu skryptu:
 ----------------------------------
@@ -125,7 +125,7 @@ Po zatwierdzeniu otrzymujemy **kanister z tokenem** na lokalnej replice. **Kontr
 
 -------------------------------------------------
 Tworzenie nowego projektu DApp
-**D
+👨‍🚀 D
 
 Otwieramy nowy terminal i upewniamy się, że używamy identity `capo`:
 
@@ -161,7 +161,7 @@ Połączenie Internet Identity z Tokenem
 -----------------------------------------------
 
 Tworzenie nowego projektu DApp
-**E
+👨‍🚀 E
 
 w Terminalu musisicie zainstalować Ledger-IC w celu połączenia się z kanistrem ( u siebie) tokena icrc-1 z poziomu frontendu
 należy łączyć się z poziomu frontendu ponieważ w plikach sesji znajduje się poświadczenie II i po tym poświadczeniu 
@@ -175,12 +175,12 @@ npm install @dfinity/auth-client @dfinity/agent @dfinity/principal @dfinity/ledg
 ------------------------------------------------
 6. Podmieńcie zawartość App.vue z tą z GitHub
 
-**F  
+👨‍🚀 F  
 
 > https://github.com/internetcomputerpol/InternetIdentity-Ledger/blob/main/App.vue
 
 -------------------------------------
-**G
+👨‍🚀 G
 7. Po przekopiowaniu podmieńcie dowiązanie do waszego backendu w Motoko ( u was może być inne zależnie od tego jak nazwaliście projekt ) 
 
 > import u mnie : import { filia_backend } from 'declarations/filia_backend/index';
@@ -189,14 +189,14 @@ u was może być inna nazwa np. import { twojaNazwaBackendu_backend } from 'decl
 
 -----------------------------------
 8. Po zmianach i zapisuaniu wpisujemy ( jako identity capo !!! ) 
-**H
+👨‍🚀 H
 
 ```sh
 dfx deploy
 ```
 -----------------------------------
 9. Problem Gołych kont nasze identity nie mają Tokena ?
-**I
+👨‍🚀 I
 
 Nasze identity nie mają tokena ponieważ całość tokena posiada identity capo. 
 Po utworzeniu Identity i zalogowaniu będziemy mogli odczytać Internet Identity utworzonych II. 
