@@ -43,7 +43,8 @@ dfx korzysta z funkcji keyring systemowego do przechowywania kluczy tożsamości
 Systemowy keyring (czyli „magazyn kluczy”) w Ubuntu to mechanizm zarządzania hasłami i innymi danymi uwierzytelniającymi.
 
 Od wersji 0.13.0, dfx wprowadził wsparcie dla systemowego keyringa.
-
+-------------------------------------------
+Narzędzie dfx przy tworzeniu new identity działa mniej więcej tak:
 Najpierw dfx próbuje użyć systemowego keyringa
 Jeśli keyring nie jest dostępny, używa plików zaszyfrowanych hasłem
 Opcjonalnie można wymusić tryb plaintext (niezaszyfrowany Tego nie polecam )
