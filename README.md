@@ -92,8 +92,9 @@ Tworzenie identity
 ```sh
 dfx identity new capo
 ```
+# Konto do mintowania i spalania (burn) tokenów
 ```sh
-dfx identity new boss  # Konto do mintowania i spalania (burn) tokenów
+dfx identity new boss  
 ```
 
 2. Logowanie do Identity `capo`
