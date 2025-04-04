@@ -31,7 +31,7 @@ Normalnie powinno to śmigać, ale czasami po wpisaniu
 
 pojawia się prompt o podanie hasła
 
-![Prompt](Prompt0.png)
+![Prompt](Pronpt0.png)
 
 Systemowy keyring (czyli „magazyn kluczy”) w Ubuntu to mechanizm zarządzania hasłami i innymi danymi uwierzytelniającymi
 Rozwiązanie odpalcie skrypt reinstalacji ( zakładam, że macie spiętą wirtualkę tylko pod ICP  Developerkę ) :
