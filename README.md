@@ -183,8 +183,10 @@ npm install @dfinity/auth-client @dfinity/agent @dfinity/principal @dfinity/ledg
 > https://github.com/internetcomputerpol/InternetIdentity-Ledger/blob/main/App.vue
 
 -------------------------------------
+
+7. Po przekopiowaniu podmieńcie dowiązanie do waszego backendu w Motoko ( u was może być inne zależnie od tego jak nazwaliście projekt )
+
 👨‍🚀 G
-7. Po przekopiowaniu podmieńcie dowiązanie do waszego backendu w Motoko ( u was może być inne zależnie od tego jak nazwaliście projekt ) 
 
 > import u mnie : import { filia_backend } from 'declarations/filia_backend/index';
 
