@@ -17,6 +17,7 @@ Instrukcja
 Najpierw tworzymy dwia identity: `capo` oraz `boss`.
 
 > dfx identity new capo
+-----------------------------
 > dfx identity new boss
 
 
