@@ -219,6 +219,8 @@ a następnie uruchomić skrypt transferu dostępny tutak na GitHub:
 
 > https://github.com/internetcomputerpol/TokenIC/blob/main/transfer_token.sh
 
+ZAZNACZONE PLIKI KTÓRE WARTO PRZEKOPIOWAĆ Z REPOZYTORIUM PODANEGO WYŻEJ
+![Prompt](TOKEN.png)
 
 uruchamiamy poleceniem
 
