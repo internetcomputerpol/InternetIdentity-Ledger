@@ -16,10 +16,11 @@ Instrukcja
 1. Tworzenie Identity
 Najpierw tworzymy dwia identity: `capo` oraz `boss`.
 
+-----------------------------
 > dfx identity new capo
 -----------------------------
 > dfx identity new boss
-
+-----------------------------
 
 Tworzenie identity
 dfx identity new capo  # Konto posiadające i rozdające tokeny
