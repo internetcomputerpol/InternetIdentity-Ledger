@@ -16,11 +16,12 @@ Instrukcja
 1. Tworzenie Identity
 Najpierw tworzymy dwia identity: `capo` oraz `boss`.
 
------------------------------
+```sh
 > dfx identity new capo
------------------------------
+```
+```sh
 > dfx identity new boss
------------------------------
+```
 
 Tworzenie identity
 dfx identity new capo  # Konto posiadające i rozdające tokeny
@@ -40,8 +41,10 @@ Skrypt oraz inne pomocne narzędzia znajdują się tutaj:
 > https://github.com/internetcomputerpol/TokenIC
 
 Po uruchomieniu skryptu:
+----------------------------------
 - Wybieramy **boss** jako konto mintujące.
 - Wybieramy **capo** jako konto do przelewu całości tokenów.
+----------------------------------
 
 Po zatwierdzeniu otrzymujemy **kanister z tokenem** na lokalnej replice. **Kontrolerem kanistra jest `capo`.**
 
@@ -49,17 +52,18 @@ Po zatwierdzeniu otrzymujemy **kanister z tokenem** na lokalnej replice. **Kontr
 
 Otwieramy nowy terminal i upewniamy się, że używamy identity `capo`:
 
-
+```sh
 dfx identity whoami
-
+```
 Jeśli nie jesteśmy zalogowani jako capo:
 dfx identity use capo
 
 
 Następnie tworzymy nowy projekt:
 
+```sh
 dfx new fillia
-
+```
 
 Wybieramy:
 - **Motoko** jako backend.
@@ -81,7 +85,9 @@ kanister ledgera będzie wiedział, że dane połączenie jest zautoryzowane wł
 
 w Terminalu wpiszcie 
 
-> npm install @dfinity/auth-client @dfinity/agent @dfinity/principal @dfinity/ledger-icrc
+```sh
+npm install @dfinity/auth-client @dfinity/agent @dfinity/principal @dfinity/ledger-icrc
+```
 
 6. Podmieńcie zawartość App.vue z tą z GitHub 
 
@@ -89,14 +95,16 @@ w Terminalu wpiszcie
 
 7. Po przekopiowaniu podmieńcie dowiązanie do waszego backendu w Motoko ( u was może być inne zależnie od tego jak nazwaliście projekt ) 
 
-import u mnie : import { filia_backend } from 'declarations/filia_backend/index';
+> import u mnie : import { filia_backend } from 'declarations/filia_backend/index';
 
 u was może być inna nazwa np. import { twojaNazwaBackendu_backend } from 'declarations/TwojaNazwaBackendu_backend/index';
 
 
 8. Po zmianach i zapisuaniu wpisujemy ( jako identity capo !!! ) 
 
-> dfx deploy
+```sh
+dfx deploy
+```
 
 9. Problem Gołych kont nasze identity nie mają Tokena ?
 
@@ -108,7 +116,9 @@ Przybierają one przykładowo taką formę: 64xl6-hhulc-irrz2-ovw2t-znlmw-onjwx-
 aby zasilić tokenami dane Internet Identity musimy w pierwszej kolejności uruchomić Terminal 
 wpisać ( dla pewności ) 
 
-> dfx identity use capo
+```sh
+dfx identity use capo
+```
 
 a następnie uruchomić skrypt transferu dostępny tutak na GitHub:
 
@@ -117,7 +127,10 @@ a następnie uruchomić skrypt transferu dostępny tutak na GitHub:
 
 uruchamiamy poleceniem
 
-> bash transfer_token.sh
+```sh
+bash transfer_token.sh
+```
+
 
 1. ( jeżeli jesteśmy capo ) to nie przelogowujemy się ( wpisujemy nie )
 2. wklejamy id principala czyli ( przykładowe 64xl6-hhulc-irrz2-ovw2t-znlmw-onjwx-3yey6-gp6m7-pflyk-rjt75-xae ) 
