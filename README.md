@@ -37,19 +37,41 @@ pojawia się prompt o podanie hasła
 
 ![Prompt](Pronpt0.png)
 
-Systemowy keyring (czyli „magazyn kluczy”) w Ubuntu to mechanizm zarządzania hasłami i innymi danymi uwierzytelniającymi
+------------------------
+Dzieje się tak dlatego, że:
+dfx korzysta z funkcji keyring systemowego do przechowywania kluczy tożsamości.
+Systemowy keyring (czyli „magazyn kluczy”) w Ubuntu to mechanizm zarządzania hasłami i innymi danymi uwierzytelniającymi.
+
+Od wersji 0.13.0, dfx wprowadził wsparcie dla systemowego keyringa.
+
+Najpierw dfx próbuje użyć systemowego keyringa
+Jeśli keyring nie jest dostępny, używa plików zaszyfrowanych hasłem
+Opcjonalnie można wymusić tryb plaintext (niezaszyfrowany Tego nie polecam )
+
+Jeśli dfx nie może uzyskać dostępu do keyringa systemowego, automatycznie przechodzi do trybu szyfrowanego hasłem.
+
+
 Rozwiązanie odpalcie skrypt reinstalacji ( zakładam, że macie spiętą wirtualkę tylko pod ICP  Developerkę ) :
 Reinstall wywali wszystkie zapisane klucze jak to środowisko dev to spoko. 
+Możecie spróbować 
+
+1) Upgrade systemu Ubuntu do najnowszej wersji
 
 ```sh
 sudo apt update
+sudo apt-get upgrade
+```
+
+2) Reinstall pakietów GNOME keyring do zarządzania kluczami tożsamości 
+
+```sh
 sudo apt install --reinstall gnome-keyring
 sudo apt install libsecret-1-0 libsecret-1-dev
 gnome-keyring-daemon --start
 
 ```
 
-Warto wykonać reboot systemu
+3) Warto po wszystkim wykonać reboot systemu
 
 ```sh
 reboot
@@ -59,6 +81,8 @@ Po wpisaniu dfx new identity nazwa_konta może wyskoczyć takie okno z promptem 
 
 ![Prompt](Prompt.png)
 
+
+-------------------------------------------------
 
 Tworzenie identity
 dfx identity new capo  # Konto posiadające i rozdające tokeny
